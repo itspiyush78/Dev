@@ -1,44 +1,34 @@
-﻿//  
-// bool flag = true;
-// int value = 0;
-// if (flag)
+﻿// Switch Statement
+
+// int employeeLevel = 200;
+// int employeeLevel = 201;
+// int employeeLevel1 = 100;
+// string employeeName = "John Smith";
+
+// string title = "";
+
+// switch (employeeLevel1)
 // {
-//     Console.WriteLine($"Inside the code block: {value}");
-// }
-// value = 10;
-// Console.WriteLine($"Outside the code block: {value}");
-
-
-// bool flag = true;
-// if (flag) Console.WriteLine(flag);
-
-// larger if-elseif-else//
-
-// string name = "steve";
-// if (name == "bob") Console.WriteLine("Found Bob");
-// else if (name == "steve") Console.WriteLine("Found Steve");
-// else Console.WriteLine("Found Chuck");
-
-// int[] numbers = { 4, 8, 15, 16, 23, 42 };
-
-// foreach (int number in numbers)
-// {
-//     int total;
-
-//     total += number;
-
-//     if (number == 42)
-//     {
-//        bool found = true;
-
-//     }
-
+//     case 100:
+//     case 200:
+//         title = "Senior Associate";
+//         break;
+//     case 300:
+//         title = "Manager";
+//         break;
+//     case 400:
+//         title = "Senior Manager";
+//         break;
+//     default:
+//         title = "Associate";
+//         break;
 // }
 
-// if (found) 
-// {
-//     Console.WriteLine("Set contains 42");
+// Console.WriteLine($"{employeeName}, {title}");
 
-// }
+/* for statement */
 
-// Console.WriteLine($"Total: {total}");
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
