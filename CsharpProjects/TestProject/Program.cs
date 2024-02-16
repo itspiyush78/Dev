@@ -1,63 +1,8 @@
-﻿// Switch Statement
+﻿/*Use the MinValue and MaxValue properties for each signed integral type*/
 
-// int employeeLevel = 200;
-// int employeeLevel = 201;
-// int employeeLevel1 = 100;
-// string employeeName = "John Smith";
+Console.WriteLine("Signed integral types:");
 
-// string title = "";
-
-// switch (employeeLevel1)
-// {
-//     case 100:
-//     case 200:
-//         title = "Senior Associate";
-//         break;
-//     case 300:
-//         title = "Manager";
-//         break;
-//     case 400:
-//         title = "Senior Manager";
-//         break;
-//     default:
-//         title = "Associate";
-//         break;
-// }
-
-// Console.WriteLine($"{employeeName}, {title}");
-
-// /* for statement */
-
-// for (int i = 0; i < 10; i++)
-// {
-//     Console.WriteLine(i);
-// }
-
-/* Do-while statement*/
-
-// Random random = new Random();
-// int current = 0;
-
-// do
-// {
-//     current = random.Next(1, 11);
-//     Console.WriteLine(current);
-// } while (current != 7);
-
-Random random = new Random();
-int current = random.Next(1, 11);
-
-/*
-do
-{
-    current = random.Next(1, 11);
-    Console.WriteLine(current);
-} while (current != 7);
-*/
-
-while (current >= 3)
-{
-    Console.WriteLine(current);
-    current = random.Next(1, 11);
-}
-Console.WriteLine($"Last number: {current}");
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
