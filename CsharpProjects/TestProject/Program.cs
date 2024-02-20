@@ -17,8 +17,18 @@
 // Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
 // Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
 
-Console.WriteLine("");
-Console.WriteLine("Floating point types:");
-Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
-Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
-Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+// Console.WriteLine("");
+// Console.WriteLine("Floating point types:");
+// Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+// Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
+// Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+
+
+//Question: Is it possible that attempting to change the value's data type would throw an exception at run time?
+
+int first = 2;
+string second = "4";
+//int result = first + second;
+string result = first + second;
+Console.WriteLine(result);
+
