@@ -26,9 +26,16 @@
 
 //Question: Is it possible that attempting to change the value's data type would throw an exception at run time?
 
-int first = 2;
-string second = "4";
-//int result = first + second;
-string result = first + second;
-Console.WriteLine(result);
+// int first = 2;
+// string second = "4";
+// //int result = first + second;
+// string result = first + second;
+// Console.WriteLine(result);
 
+// Question: Is it possible that attempting to change the value's data type would result in a loss of information?
+
+int myInt = 3;
+Console.WriteLine($"int: {myInt}");
+
+decimal myDecimal = myInt;
+Console.WriteLine($"decimal: {myDecimal}");
