@@ -34,8 +34,21 @@
 
 // Question: Is it possible that attempting to change the value's data type would result in a loss of information?
 
-int myInt = 3;
-Console.WriteLine($"int: {myInt}");
+// int myInt = 3;
+// Console.WriteLine($"int: {myInt}");
 
-decimal myDecimal = myInt;
-Console.WriteLine($"decimal: {myDecimal}");
+// decimal myDecimal = myInt;
+// Console.WriteLine($"decimal: {myDecimal}");
+
+// TryParse() a string into an int
+
+string value = "102";
+int result = 0;
+if (int.TryParse(value, out result))
+{
+   Console.WriteLine($"Measurement: {result}");
+}
+else
+{
+   Console.WriteLine("Unable to report the measurement.");
+}
