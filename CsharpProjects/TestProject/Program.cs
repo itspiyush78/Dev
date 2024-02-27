@@ -1,54 +1,115 @@
-﻿/*Use the MinValue and MaxValue properties for each signed integral type*/
+﻿/*  Create an array of pallets, then sort them */
 
-// Console.WriteLine("Signed integral types:");
+// string[] pallets = { "B14", "A11", "B12", "A13" };
 
-// Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
-// Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
-// Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
-// Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
+// Console.WriteLine("Sorted...");
+// Array.Sort(pallets);
+// foreach (var pallet in pallets)
+// {
+//    Console.WriteLine($"--{pallet}");
+// }
 
-// // Use the MinValue and MaxValue properties for each unsigned integral type
+/* Reverse the order of the pallets */
+
+// string[] pallets = { "B14", "A11", "B12", "A13" };
+
+// Console.WriteLine("Sorted...");
+// Array.Sort(pallets);
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
 // Console.WriteLine("");
-// Console.WriteLine("Unsigned integral types:");
+// Console.WriteLine("Reversed...");
+// Array.Reverse(pallets);
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
-// Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
-// Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
-// Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
-// Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
+/* array methods to clear and resize an array */
 
+// string[] pallets = { "B14", "A11", "B12", "A13" };
 // Console.WriteLine("");
-// Console.WriteLine("Floating point types:");
-// Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
-// Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
-// Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+
+// Array.Clear(pallets, 0, 2);
+// Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
 
-//Question: Is it possible that attempting to change the value's data type would throw an exception at run time?
+// string customerName = "Ms. Barros";
 
-// int first = 2;
-// string second = "4";
-// //int result = first + second;
-// string result = first + second;
-// Console.WriteLine(result);
+// string currentProduct = "Magic Yield";
+// int currentShares = 2975000;
+// decimal currentReturn = 0.1275m;
+// decimal currentProfit = 55000000.0m;
 
-// Question: Is it possible that attempting to change the value's data type would result in a loss of information?
+// string newProduct = "Glorious Future";
+// decimal newReturn = 0.13125m;
+// decimal newProfit = 63000000.0m;
 
-// int myInt = 3;
-// Console.WriteLine($"int: {myInt}");
+// // Your logic here
 
-// decimal myDecimal = myInt;
-// Console.WriteLine($"decimal: {myDecimal}");
+// Console.WriteLine("Here's a quick comparison:\n");
 
-// TryParse() a string into an int
+// string comparisonMessage = "";
 
-string value = "102";
-int result = 0;
-if (int.TryParse(value, out result))
+// // Your logic here
+
+// Console.WriteLine(comparisonMessage);
+
+
+string message = "(What if) I have [different symbols] but every {open symbol} needs a [matching closing symbol]?";
+
+// The IndexOfAny() helper method requires a char array of characters. 
+// You want to look for:
+
+char[] openSymbols = { '[', '{', '(' };
+
+// You'll use a slightly different technique for iterating through 
+// the characters in the string. This time, use the closing 
+// position of the previous iteration as the starting index for the 
+//next open symbol. So, you need to initialize the closingPosition 
+// variable to zero:
+
+int closingPosition = 0;
+
+while (true)
 {
-   Console.WriteLine($"Measurement: {result}");
-}
-else
-{
-   Console.WriteLine("Unable to report the measurement.");
+    int openingPosition = message.IndexOfAny(openSymbols, closingPosition);
+
+    if (openingPosition == -1) break;
+
+    string currentSymbol = message.Substring(openingPosition, 1);
+
+    // Now  find the matching closing symbol
+    char matchingSymbol = ' ';
+
+    switch (currentSymbol)
+    {
+        case "[":
+            matchingSymbol = ']';
+            break;
+        case "{":
+            matchingSymbol = '}';
+            break;
+        case "(":
+            matchingSymbol = ')';
+            break;
+    }
+
+    // To find the closingPosition, use an overload of the IndexOf method to specify 
+    // that the search for the matchingSymbol should start at the openingPosition in the string. 
+
+    openingPosition += 1;
+    closingPosition = message.IndexOf(matchingSymbol, openingPosition);
+
+    // Finally, use the techniques you've already learned to display the sub-string:
+
+    int length = closingPosition - openingPosition;
+    Console.WriteLine(message.Substring(openingPosition, length));
 }
