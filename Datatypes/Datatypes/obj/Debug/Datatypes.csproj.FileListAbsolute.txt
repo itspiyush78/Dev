@@ -1,0 +1,7 @@
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\bin\Debug\Datatypes.exe.config
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\bin\Debug\Datatypes.exe
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\bin\Debug\Datatypes.pdb
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\obj\Debug\Datatypes.csproj.AssemblyReference.cache
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\obj\Debug\Datatypes.csproj.CoreCompileInputs.cache
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\obj\Debug\Datatypes.exe
+D:\CODING\30dayschallengeCsharp\Datatypes\Datatypes\obj\Debug\Datatypes.pdb
